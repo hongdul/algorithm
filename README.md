@@ -6,6 +6,7 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 ## Math
 |  |
 | ------- |
+| [0007-reverse-integer](https://github.com/hongdul/algorithm/tree/master/0007-reverse-integer) |
 | [0009-palindrome-number](https://github.com/hongdul/algorithm/tree/master/0009-palindrome-number) |
 ## String
 |  |
