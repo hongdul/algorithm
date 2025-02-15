@@ -4,14 +4,15 @@ function convert(s: string, numRows: number): string {
         int_arr.push([]);
     }
 
-     while (s) {
+    let index = 0;
+    while (index < s.length) {
         for (let i = 0; i < numRows && s; i++) {
-            int_arr[i].push(s[0]);
-            s = s.slice(1);
+            int_arr[i].push(s[index]);
+            index++;
         }
         for (let i = numRows - 2; i > 0 && s; i--) {
-            int_arr[i].push(s[0]);
-            s = s.slice(1);
+            int_arr[i].push(s[index]);
+            index++;
         }
     }
     return int_arr.map((arr) => arr.join('')).join('');
