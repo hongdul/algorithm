@@ -11,10 +11,8 @@ class Solution {
                 val sum = nums[left] + nums[i] + nums[right]
                 if (sum < 0) {
                     left++
-                    continue
                 } else if (sum > 0) {
                     right--
-                    continue
                 } else {
                     answerList.add(listOf(nums[left], nums[i], nums[right]))
                     left++
