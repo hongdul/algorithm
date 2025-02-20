@@ -9,10 +9,17 @@ class Solution {
 
             while (left < right) {
                 val sum = nums[left] + nums[i] + nums[right]
-                if (sum == 0) {
+                if (sum < 0) {
+                    left++
+                    continue
+                } else if (sum > 0) {
+                    right--
+                    continue
+                } else {
                     answerList.add(listOf(nums[left], nums[i], nums[right]))
+                    left++
+                    right--
                 }
-                if (nums[i] + nums[left] + nums[right] <= 0) left++ else right--
             }
         }
         return answerList.toList()
