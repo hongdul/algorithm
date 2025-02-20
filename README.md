@@ -24,4 +24,16 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 |  |
 | ------- |
 | [0014-longest-common-prefix](https://github.com/hongdul/algorithm/tree/master/0014-longest-common-prefix) |
+## Array
+|  |
+| ------- |
+| [0015-3sum](https://github.com/hongdul/algorithm/tree/master/0015-3sum) |
+## Two Pointers
+|  |
+| ------- |
+| [0015-3sum](https://github.com/hongdul/algorithm/tree/master/0015-3sum) |
+## Sorting
+|  |
+| ------- |
+| [0015-3sum](https://github.com/hongdul/algorithm/tree/master/0015-3sum) |
 <!---LeetCode Topics End-->
