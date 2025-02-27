@@ -9,17 +9,15 @@
  */
 class Solution {
     fun sumListNodes(l1: ListNode?, l2: ListNode?, rest: Int): ListNode? {
-            var firstNode = l1
-            var secondNode = l2
-            var first = firstNode?.`val` ?: 0
-            var second = secondNode?.`val` ?: 0
-            var sum = first + second + rest
-            var rest = if (sum >= 10) 1 else 0
+            val first = l1?.`val` ?: 0
+            val second = l2?.`val` ?: 0
+            val sum = first + second + rest
+            val rest = if (sum >= 10) 1 else 0
 
-            var curNode = ListNode(sum % 10)
+            val curNode = ListNode(sum % 10)
 
-            firstNode = firstNode?.next ?: null
-            secondNode = secondNode?.next ?: null
+            val firstNode = l1?.next ?: null
+            val secondNode = l2?.next ?: null
 
             if (firstNode != null || secondNode != null || rest != 0) {
                 curNode.next = sumListNodes(firstNode, secondNode, rest)
