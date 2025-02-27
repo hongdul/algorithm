@@ -15,12 +15,9 @@ class Solution {
             val rest = if (sum >= 10) 1 else 0
 
             val curNode = ListNode(sum % 10)
-
-            val firstNode = l1?.next ?: null
-            val secondNode = l2?.next ?: null
-
-            if (firstNode != null || secondNode != null || rest != 0) {
-                curNode.next = sumListNodes(firstNode, secondNode, rest)
+            
+            if (l1?.next != null || l2?.next != null || rest != 0) {
+                curNode.next = sumListNodes(l1?.next, l2?.next, rest)
             }
 
             return curNode
