@@ -3,9 +3,8 @@ class Solution {
         val numberMap: MutableMap<Int, Int> = mutableMapOf()
 
         for ((index, value) in nums.withIndex()) {
-            if (numberMap.contains(target - value)) {
-                return intArrayOf(numberMap[target-value]!!, index)
-            }
+            numberMap[target-value]?.let { return intArrayOf(numberMap[target-value]!!, index) }
+
             numberMap[value] = index
         }
         return intArrayOf()
