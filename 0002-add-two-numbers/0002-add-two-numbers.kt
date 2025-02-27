@@ -8,17 +8,16 @@
  * }
  */
 class Solution {
+    
     fun sumListNodes(l1: ListNode?, l2: ListNode?, rest: Int): ListNode? {
-            if (l1 == null && l2 == null && rest == 0) return null
+        val sum = (l1?.`val` ?: 0) + (l2?.`val` ?: 0) + rest
+        val curNode = ListNode(sum % 10)
 
-            val first = l1?.`val` ?: 0
-            val second = l2?.`val` ?: 0
-            val sum = first + second + rest
-            val curNode = ListNode(sum % 10)
-
+        if (l1?.next != null || l2?.next != null || sum / 10 != 0) {
             curNode.next = sumListNodes(l1?.next, l2?.next, sum / 10)
+        }
 
-            return curNode
+        return curNode
     }
 
     fun addTwoNumbers(l1: ListNode?, l2: ListNode?): ListNode? {
