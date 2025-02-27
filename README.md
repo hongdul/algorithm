@@ -19,6 +19,7 @@ LeetCode 풀이 레포지토리
 ## Hash Table
 |  |
 | ------- |
+| [0001-two-sum](https://github.com/hongdul/algorithm/tree/master/0001-two-sum) |
 | [0013-roman-to-integer](https://github.com/hongdul/algorithm/tree/master/0013-roman-to-integer) |
 ## Trie
 |  |
@@ -27,6 +28,7 @@ LeetCode 풀이 레포지토리
 ## Array
 |  |
 | ------- |
+| [0001-two-sum](https://github.com/hongdul/algorithm/tree/master/0001-two-sum) |
 | [0015-3sum](https://github.com/hongdul/algorithm/tree/master/0015-3sum) |
 ## Two Pointers
 |  |
