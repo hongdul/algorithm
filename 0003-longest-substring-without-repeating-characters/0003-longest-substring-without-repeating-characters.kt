@@ -18,6 +18,6 @@ class Solution {
             longestLength = word.length
         }
 
-        return if (longestLength == 0) s.length else longestLength
+        return longestLength
     }
 }
