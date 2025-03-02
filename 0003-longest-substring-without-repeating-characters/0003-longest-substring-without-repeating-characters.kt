@@ -1,23 +1,17 @@
 class Solution {
     fun lengthOfLongestSubstring(s: String): Int {
-        var word = ""
-        var longestLength = 0
+        var left = 0
+        var maxLength = 0
+        var charMap = mutableMapOf<Char, Int>()
 
-        for (c in s) {
-            val charIndex = word.indexOf(c)
-            if (charIndex != -1) {
-                if (word.length > longestLength) {
-                    longestLength = word.length
-                }
-                word = word.substring(charIndex + 1)
+        for (right in s.indices) {
+            if (charMap.contains(s[right]) && charMap[s[right]]!! >= left) {
+                left = charMap[s[right]]!! + 1
             }
-            word += c
+            charMap[s[right]] = right
+            maxLength = maxOf(maxLength, right - left + 1)
         }
 
-        if (word.length > longestLength) {
-            longestLength = word.length
-        }
-
-        return longestLength
+        return maxLength
     }
 }
