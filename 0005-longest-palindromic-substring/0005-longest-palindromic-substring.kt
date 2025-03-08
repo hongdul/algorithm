@@ -7,8 +7,9 @@ class Solution {
                 .filter { it > i }
             if (charMap.isEmpty()) {
                 longest = longest.ifEmpty { v.toString() }
+                continue
             }
-            
+
             for (j in charMap) {
                 val sub = s.substring(i, j + 1)
                 if (sub == sub.reversed()) {
