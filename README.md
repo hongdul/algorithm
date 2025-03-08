@@ -14,6 +14,7 @@ LeetCode 풀이 레포지토리
 |  |
 | ------- |
 | [0003-longest-substring-without-repeating-characters](https://github.com/hongdul/algorithm/tree/master/0003-longest-substring-without-repeating-characters) |
+| [0005-longest-palindromic-substring](https://github.com/hongdul/algorithm/tree/master/0005-longest-palindromic-substring) |
 | [0006-zigzag-conversion](https://github.com/hongdul/algorithm/tree/master/0006-zigzag-conversion) |
 | [0008-string-to-integer-atoi](https://github.com/hongdul/algorithm/tree/master/0008-string-to-integer-atoi) |
 | [0013-roman-to-integer](https://github.com/hongdul/algorithm/tree/master/0013-roman-to-integer) |
@@ -37,6 +38,7 @@ LeetCode 풀이 레포지토리
 ## Two Pointers
 |  |
 | ------- |
+| [0005-longest-palindromic-substring](https://github.com/hongdul/algorithm/tree/master/0005-longest-palindromic-substring) |
 | [0015-3sum](https://github.com/hongdul/algorithm/tree/master/0015-3sum) |
 ## Sorting
 |  |
@@ -62,4 +64,8 @@ LeetCode 풀이 레포지토리
 |  |
 | ------- |
 | [0004-median-of-two-sorted-arrays](https://github.com/hongdul/algorithm/tree/master/0004-median-of-two-sorted-arrays) |
+## Dynamic Programming
+|  |
+| ------- |
+| [0005-longest-palindromic-substring](https://github.com/hongdul/algorithm/tree/master/0005-longest-palindromic-substring) |
 <!---LeetCode Topics End-->
