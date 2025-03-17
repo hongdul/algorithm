@@ -1,22 +1,27 @@
 class Solution {
     fun longestPalindrome(s: String): String {
+        if (s.length <= 1) return s
+
         var longest = ""
 
-        for ((i, v) in s.withIndex()) {
-            val charMap = s.mapIndexedNotNull { index, c -> if (c == v) index else null }
-                .filter { it > i }
-            if (charMap.isEmpty()) {
-                longest = longest.ifEmpty { v.toString() }
-                continue
+        fun checkPalindrome(left: Int, right: Int) {
+            var l = left
+            var r = right
+            while (l >= 0 && r < s.length) {
+                if (s[l] == s[r]) {
+                    l--
+                    r++
+                } else break
             }
-
-            for (j in charMap) {
-                val sub = s.substring(i, j + 1)
-                if (sub == sub.reversed()) {
-                    longest = if (sub.length > longest.length) sub else longest
-                }
+            if (r - l - 1 > longest.length) {
+                longest = s.substring(l + 1, r)
             }
         }
+        for (i in s.indices) {
+            checkPalindrome(i, i)
+            checkPalindrome(i, i + 1)
+        }
+
         return longest
     }
 }
