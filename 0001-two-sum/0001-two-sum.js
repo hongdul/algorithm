@@ -9,9 +9,9 @@ var twoSum = function(nums, target) {
     var numMap = new Map();
 
     for (var i = 0; i < nums.length; i++) {
-        var seen = numMap.has(target - nums[i]);
-        if (seen) {
-            return [i, numMap.get(target - nums[i])];
+        var seen = numMap.get(target - nums[i]);
+        if (seen != undefined) {
+            return [i, seen];
         }
         numMap.set(nums[i], i);
     }
