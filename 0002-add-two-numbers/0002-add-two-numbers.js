@@ -11,19 +11,19 @@
  * @return {ListNode}
  */
 var addTwoNumbers = function(l1, l2, rest) {
-    /** 
-    - function에 rest 인자를 추가하지 않고 helper함수 작성하는 방식 추천
+/** 
+* function에 rest 인자를 추가하지 않고 helper함수 작성하는 방식 추천
+*
+*    function helper(l1, l2, carry) {
+*        if (!l1 && !l2 && !carry) return null;
+*        const sum = (l1?.val || 0) + (l2?.val || 0) + carry;
+*        return new ListNode(sum % 10, helper(l1?.next, l2?.next, Math.floor(sum / 10)));
+*    }
+*
+*    return helper(l1, l2, 0);
+*/  
 
-        function helper(l1, l2, carry) {
-            if (!l1 && !l2 && !carry) return null;
-            const sum = (l1?.val || 0) + (l2?.val || 0) + carry;
-            return new ListNode(sum % 10, helper(l1?.next, l2?.next, Math.floor(sum / 10)));
-        }
-
-        return helper(l1, l2, 0);
-    */  
-
-    var sum = 0;
+var sum = 0;
     
     if (!l1 && !l2) {
         if (rest > 0) {
