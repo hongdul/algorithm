@@ -9,10 +9,11 @@ var convert = function(s, numRows) {
     if (cycle == 0) return s;
     
     for (var i = 0; i < s.length; i++) {
+        var char = s[i];
         var index = i % cycle;
 
-        if (index < numRows) numArr[index].push(s[i]);
-        else numArr[cycle - index].push(s[i]);
+        if (index < numRows) numArr[index].push(char);
+        else numArr[cycle - index].push(char);
     }
 
     return numArr.reduce((acc, arr) => {
