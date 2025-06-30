@@ -3,10 +3,13 @@
  * @return {boolean}
  */
 var isPalindrome = function(x) {
+// 1. 문자열 뒤집기
     if (x < 0) return false;
 
     x = x.toString();
     return x == x.split('').reverse().join('');
+
+// 2. 중앙 확장
     // const len = x.length;
     // const isOdd = len % 2 != 0;
 
@@ -29,4 +32,16 @@ var isPalindrome = function(x) {
     //     }
     //     return true;
     // }
+
+// 3. 정수 기반 뒤집기
+    // if (x < 0 || (x % 10 === 0 && x !== 0)) return false;
+
+    // let reverted = 0;
+    // while (x > reverted) {
+    //     reverted = reverted * 10 + x % 10;
+    //     x = Math.floor(x / 10);
+    // }
+
+    // // 숫자 길이가 홀수면 가운데 수는 무시
+    // return x === reverted || x === Math.floor(reverted / 10);
 };
