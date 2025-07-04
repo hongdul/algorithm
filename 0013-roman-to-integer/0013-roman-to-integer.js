@@ -20,8 +20,12 @@ var romanToInt = function(s) {
         let char = s[i];
         let nextChar = s[i + 1];
 
-        if (romanMap.get(char) < romanMap.get(nextChar)) answer -= romanMap.get(char);
-        else answer += romanMap.get(char);
+        let curNum = romanMap.get(char);
+        let nextNum = romanMap.get(nextChar);
+
+        if (nextChar && curNum < nextNum) answer -= curNum;
+        else answer += curNum;
+        
         i++;
     }
     return answer;
