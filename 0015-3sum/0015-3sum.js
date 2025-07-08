@@ -12,19 +12,18 @@ var threeSum = function(nums) {
     let mid = left + 1;
     
     while (left < nums.length - 2) {    
-        let sum = nums[left] + nums[mid] + nums[right];
-        
-        if (sum == 0) {
-            answer.push([nums[left], nums[mid], nums[right]]);
-            mid++;
-            do { right-- } while (nums[right] == nums[right + 1])
-            if (mid < right) continue;
-        } else if (sum < 0) {
-            mid++;
-            if (mid < right) continue;
-        } else {
-            do { right-- } while (nums[right] == nums[right + 1]);
-            if (mid < right) continue;
+        while (mid < right) {
+            let sum = nums[left] + nums[mid] + nums[right];
+
+            if (sum == 0) {
+                answer.push([nums[left], nums[mid], nums[right]]);
+                do { mid++ } while (nums[mid] == nums[mid - 1])
+                do { right-- } while (nums[right] == nums[right + 1])
+            } else if (sum < 0) {
+                do { mid++ } while (nums[mid] == nums[mid - 1])
+            } else {
+                do { right-- } while (nums[right] == nums[right + 1]);
+            }
         }
 
         do { left++ } while (nums[left] == nums[left - 1])
