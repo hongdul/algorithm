@@ -4,7 +4,6 @@
  */
 var letterCombinations = function(digits) {
     let answer = [];
-    let charArr = [];
     let charMap = new Map([
         ['2', 'abc'],
         ['3', 'def'],
@@ -15,14 +14,8 @@ var letterCombinations = function(digits) {
         ['8', 'tuv'],
         ['9', 'wxyz'],
     ]);
-
-    if (digits.length <= 1) {
-        return digits.length == 1 ? charMap.get(digits[0]).split("") : [];
-    }
-
-    for (let i = 0; i < digits.length; i++) {
-        charArr.push(charMap.get(digits[i]));
-    }
+    if (!digits.length) return [];
+    if (digits.length == 1) return charMap.get(digits[0]).split("");
 
     addChar("", 0);
 
@@ -31,12 +24,12 @@ var letterCombinations = function(digits) {
             answer.push(char);
             return;
         }
-        let chars = charArr[l];
+        let chars = charMap.get(digits[l]);
         
         for (let i = 0; i < chars.length; i++) {
             addChar(char + chars[i], l + 1);
         }
     }
-    
+
     return answer;
 };
