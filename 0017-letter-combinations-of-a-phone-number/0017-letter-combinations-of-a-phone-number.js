@@ -24,13 +24,9 @@ var letterCombinations = function(digits) {
         charArr.push(charMap.get(digits[i]));
     }
 
-    for (let i = 0; i < charArr[0].length; i++) {
-        let char = charArr[0][i];
-        addChar(char, 1);
-    }
+    addChar("", 0);
 
     function addChar(char, l) {
-        console.log(char, l);
         if (l >= digits.length) {
             answer.push(char);
             return;
@@ -41,5 +37,6 @@ var letterCombinations = function(digits) {
             addChar(char + chars[i], l + 1);
         }
     }
+    
     return answer;
 };
