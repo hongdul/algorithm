@@ -12,21 +12,21 @@ var fourSum = function(nums, target) {
 
     while (start < end - 2) {
         while (start + 2 < end) {
-            for (let m = start + 1; m < end - 1; m++) {
-                let n = end - 1;
+            let m = start + 1;
+            let n = end - 1;
 
-                while (m < n) {
-                    let sum = nums[start] + nums[m] + nums[n] + nums[end];
-                    
-                    if (sum == target) {
-                        answer.add([nums[start], nums[m],  nums[n], nums[end]].toString());
-                        m++;
-                        n--;
-                    } else if (sum < target) {
-                        m++;
-                    } else n--;
-                }
+            while (m < n) {
+                let sum = nums[start] + nums[m] + nums[n] + nums[end];
+                
+                if (sum == target) {
+                    answer.add([nums[start], nums[m],  nums[n], nums[end]].toString());
+                    m++;
+                    n--;
+                } else if (sum < target) {
+                    m++;
+                } else n--;
             }
+            
             end--;
         }
         start++;
