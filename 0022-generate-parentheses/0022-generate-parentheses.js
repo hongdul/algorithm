@@ -5,7 +5,7 @@
 var generateParenthesis = function(n) {
     let answer = [];
 
-    for (let i = 0; i < 2 ** (2 * n); i++) {
+    for (let i = 1; i < 2 ** (2 * n - 1); i++) {
         const binStr = i.toString(2).padStart(2 * n, '0');
 
         const ones = binStr.split('1').length - 1;
