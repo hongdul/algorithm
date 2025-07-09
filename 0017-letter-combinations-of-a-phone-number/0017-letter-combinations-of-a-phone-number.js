@@ -15,7 +15,7 @@ var letterCombinations = function(digits) {
         ['9', 'wxyz'],
     ]);
     if (!digits.length) return [];
-    if (digits.length == 1) return charMap.get(digits[0]).split("");
+    if (digits.length === 1) return charMap.get(digits[0]).split("");
 
     addChar("", 0);
 
