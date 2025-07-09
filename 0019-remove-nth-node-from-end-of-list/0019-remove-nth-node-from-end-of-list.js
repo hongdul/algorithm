@@ -11,18 +11,39 @@
  * @return {ListNode}
  */
 var removeNthFromEnd = function(head, n) {
-    const dummy = new ListNode(0, head);
 
-    function recurse(node) {
-        if (!node) return 0;
-        const pos = recurse(node.next) + 1;
-        if (pos === n + 1) node.next = node.next.next;
-        return pos;
+    const dummy = new ListNode(0, head);
+    let fast = dummy;
+    let slow = dummy;
+
+    // fast를 n+1칸 먼저 보냄
+    for (let i = 0; i <= n; i++) fast = fast.next;
+
+    // fast와 slow가 같이 움직임
+    while (fast) {
+        fast = fast.next;
+        slow = slow.next;
     }
 
-    recurse(dummy);
+    // slow의 next를 삭제
+    slow.next = slow.next.next;
     return dummy.next;
-    
+
+// gpt - 재귀 
+    // const dummy = new ListNode(0, head);
+
+    // function recurse(node) {
+    //     if (!node) return 0;
+    //     const pos = recurse(node.next) + 1;
+    //     if (pos === n + 1) node.next = node.next.next;
+    //     return pos;
+    // }
+
+    // recurse(dummy);
+    // return dummy.next;
+
+
+// 내 풀이 - 재귀 
     // let count = 1;
     // let nodeLen = 30;
 
