@@ -15,15 +15,15 @@ var myAtoi = function(s) {
     // Step 2
     if('+-'.includes(s[0])) sign = s[0];
     let startIndex = sign != '' ? 1 : 0;
-    if (sign == '+') sign = '';
+    if (sign === '+') sign = '';
 
     // Step 3
     for(let i = startIndex; i < s.length; i++) {
         if (/[0-9]/.test(s[i])) num += s[i];
         else break;
     }
-    if (num == '') return 0;
-    if (sign == '-') num = Number(sign + num);
+    if (num === '') return 0;
+    if (sign === '-') num = Number(sign + num);
     else num = Number(num);
     
     if (num > INT_MAX) return INT_MAX;
