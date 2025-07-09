@@ -15,7 +15,7 @@ var threeSumClosest = function(nums, target) {
             let sum = nums[i] + nums[left] + nums[right];
             answer = Math.abs(target - sum) < Math.abs(target - answer) ? sum : answer;
 
-            if (sum == target) return sum;
+            if (sum === target) return sum;
             else if (sum < target) left++;
             else right--;
         }
