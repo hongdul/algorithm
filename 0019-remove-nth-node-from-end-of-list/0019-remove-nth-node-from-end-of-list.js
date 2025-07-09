@@ -12,6 +12,7 @@
  */
 var removeNthFromEnd = function(head, n) {
 
+// gpt - 투포인터
     const dummy = new ListNode(0, head);
     let fast = dummy;
     let slow = dummy;
@@ -58,12 +59,12 @@ var removeNthFromEnd = function(head, n) {
     //     }
     //     else nodeLen = count;
 
-    //     if (nodeLen == n) {
+    //     if (nodeLen === n) {
     //         head = node.next;
     //         return;
     //     }
 
-    //     if (a == nodeLen - n) {
+    //     if (a === nodeLen - n) {
     //         node.next = node.next.next;
     //         return;
     //     }
