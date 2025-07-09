@@ -4,22 +4,18 @@
  */
 var isValid = function(s) {
     let stack = [];
-    let pOpen = ['(', '{', '['];
-    let pMatch = new Map([
-        ['(', ')'],
-        ['{', '}'],
-        ['[', ']'],
+    const pOpen = new Set(['(', '{', '[']);
+    const pMatch = new Map([
         [')', '('],
         ['}', '{'],
         [']', '['],
     ])
 
     for (let c of s) {        
-        if (pOpen.includes(c)) stack.push(c);
+        if (pOpen.has(c)) stack.push(c);
         else {
             let last = stack.pop();
-            if (last && last === pMatch.get(c)) continue;
-            return false;
+            if (last !== pMatch.get(c)) return false;
         }
     }
 
