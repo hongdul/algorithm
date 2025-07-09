@@ -5,7 +5,7 @@
  */
 var findMedianSortedArrays = function(nums1, nums2) {
     var totalLength = nums1.length + nums2.length;
-    var median = totalLength % 2 != 0 ? Math.floor(totalLength / 2) : Math.ceil(totalLength / 2);
+    var median = totalLength % 2 !== 0 ? Math.floor(totalLength / 2) : Math.ceil(totalLength / 2);
 
     var nums1Index = 0;
     var nums2Index = 0;
@@ -22,7 +22,7 @@ var findMedianSortedArrays = function(nums1, nums2) {
         }
     }
 
-    return totalLength % 2 != 0 
+    return totalLength % 2 !== 0 
         ? mergedArr[mergedArr.length - 1] 
         : (mergedArr[mergedArr.length - 1] + mergedArr[mergedArr.length - 2]) / 2;
 };
