@@ -10,7 +10,7 @@ var twoSum = function(nums, target) {
 
     for (var i = 0; i < nums.length; i++) {
         var seen = numMap.get(target - nums[i]);
-        if (seen != undefined) {
+        if (seen !== undefined) {
             return [i, seen];
         }
         numMap.set(nums[i], i);
