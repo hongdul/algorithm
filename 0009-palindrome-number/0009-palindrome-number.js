@@ -19,7 +19,7 @@ var isPalindrome = function(x) {
     // function calcPalindrome(mid, isOdd) {
     //     if (isOdd) {
     //         for (let i = 1; i <= mid; i++) {
-    //             if (x[mid - i] == x[mid + i]) continue;
+    //             if (x[mid - i] === x[mid + i]) continue;
     //             return false;
     //         }
     //         return true;
@@ -27,7 +27,7 @@ var isPalindrome = function(x) {
 
     //     let mid2 = mid + 1;
     //     for (let i = 0; i <= mid; i++) {
-    //         if (x[mid - i] == x[mid2 + i]) continue;
+    //         if (x[mid - i] === x[mid2 + i]) continue;
     //         return false;
     //     }
     //     return true;
