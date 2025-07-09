@@ -18,10 +18,10 @@ var isValid = function(s) {
         if (pOpen.includes(c)) stack.push(c);
         else {
             let last = stack.pop();
-            if (last && last == pMatch.get(c)) continue;
+            if (last && last === pMatch.get(c)) continue;
             return false;
         }
     }
 
-    return stack.length == 0;
+    return stack.length === 0;
 };
