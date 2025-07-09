@@ -17,8 +17,8 @@ var threeSum = function(nums) {
 
             if (sum == 0) {
                 answer.push([nums[left], nums[mid], nums[right]]);
-                do { mid++ } while (nums[mid] == nums[mid - 1])
-                do { right-- } while (nums[right] == nums[right + 1])
+                do { mid++ } while (nums[mid] === nums[mid - 1])
+                do { right-- } while (nums[right] === nums[right + 1])
             } else if (sum < 0) {
                 mid++;
             } else {
@@ -26,7 +26,7 @@ var threeSum = function(nums) {
             }
         }
 
-        do { left++ } while (nums[left] == nums[left - 1])
+        do { left++ } while (nums[left] === nums[left - 1])
         mid = left + 1;
         right = nums.length - 1;
     }
