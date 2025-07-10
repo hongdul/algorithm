@@ -36,4 +36,41 @@ var reverseKGroup = function(head, k) {
     }
 
     return answer.next;
+
+// gpt - 포인터
+//     const dummy = new ListNode(0, head);
+//     let groupPrev = dummy;
+
+//     while (true) {
+//         let kth = getKthNode(groupPrev, k);
+//         if (!kth) break;
+
+//         let groupNext = kth.next;
+//         // reverse group
+//         let prev = kth.next;
+//         let curr = groupPrev.next;
+
+//         while (curr !== groupNext) {
+//             let tmp = curr.next;
+//             curr.next = prev;
+//             prev = curr;
+//             curr = tmp;
+//         }
+
+//         // swap groupPrev and kth
+//         let tmp = groupPrev.next;
+//         groupPrev.next = kth;
+//         groupPrev = tmp;
+//     }
+
+//     return dummy.next;
+
+//     function getKthNode(curr, k) {
+//         while (curr && k > 0) {
+//             curr = curr.next;
+//             k--;
+//         }
+//         return curr;
+//     }
+
 };
