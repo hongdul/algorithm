@@ -12,14 +12,11 @@
 var swapPairs = function(head) {
     let dummy = new ListNode(0, head);
     let answer = dummy;
-    // check swapable
-    let isSwapable = dummy && dummy.next && dummy.next.next;
-
+    
     // jump 2
-    while (isSwapable) {
+    while (dummy.next && dummy.next.next) {
         swap(dummy);
         dummy = dummy.next.next;
-        isSwapable = dummy && dummy.next && dummy.next.next;
     }
     
     return answer.next;
