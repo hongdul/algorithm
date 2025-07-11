@@ -11,6 +11,7 @@ LeetCode 풀이 레포지토리
 | [0009-palindrome-number](https://github.com/hongdul/algorithm/tree/master/0009-palindrome-number) |
 | [0012-integer-to-roman](https://github.com/hongdul/algorithm/tree/master/0012-integer-to-roman) |
 | [0013-roman-to-integer](https://github.com/hongdul/algorithm/tree/master/0013-roman-to-integer) |
+| [0029-divide-two-integers](https://github.com/hongdul/algorithm/tree/master/0029-divide-two-integers) |
 ## String
 |  |
 | ------- |
@@ -119,4 +120,8 @@ LeetCode 풀이 레포지토리
 |  |
 | ------- |
 | [0028-find-the-index-of-the-first-occurrence-in-a-string](https://github.com/hongdul/algorithm/tree/master/0028-find-the-index-of-the-first-occurrence-in-a-string) |
+## Bit Manipulation
+|  |
+| ------- |
+| [0029-divide-two-integers](https://github.com/hongdul/algorithm/tree/master/0029-divide-two-integers) |
 <!---LeetCode Topics End-->
