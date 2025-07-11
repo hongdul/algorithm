@@ -6,16 +6,18 @@
 var strStr = function(haystack, needle) {
     let i = 0;
     let j = 0;
+    let nextIndex = 0;
 
     while (j < needle.length) {
         if (i === haystack.length) return -1;
         if (haystack[i] === needle[j]) {
             i++;
             j++;
+            if (j !== 0 && nextIndex === 0) nextIndex = i;
         } else {
-            let nextIndex = haystack.slice(i - j + 1, i + 1).indexOf(needle[0]);
-            if (nextIndex !== -1) {
-                i = nextIndex + i - j + 1;
+            if (nextIndex !== 0) {
+                i = nextIndex;
+                nextIndex = 0;
             } else i++;
             
             j = 0;
