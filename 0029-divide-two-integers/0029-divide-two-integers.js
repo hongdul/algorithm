@@ -42,4 +42,28 @@ var divide = function(dividend, divisor) {
     } else {
         return Number(answer) < MIN_NUM ? MIN_NUM : -Number(answer);
     }
+
+// gpt - 비트 연산 기반 이진 탐색
+//     const MAX = 2 ** 31 - 1;
+//     const MIN = -(2 ** 31);
+
+//     if (dividend === MIN && divisor === -1) return MAX;
+
+//     let sign = (dividend > 0) === (divisor > 0);  // 같은 부호면 양수
+
+//     let a = Math.abs(dividend);
+//     let b = Math.abs(divisor);
+//     let result = 0;
+
+//     while (a >= b) {
+//         let temp = b, multiple = 1;
+//         while (a >= (temp << 1)) {
+//             temp <<= 1;
+//             multiple <<= 1;
+//         }
+//         a -= temp;
+//         result += multiple;
+//     }
+
+//     return sign ? result : -result;
 };
