@@ -14,7 +14,7 @@ var searchInsert = function(nums, target) {
     let maxCount = Math.floor(Math.log2(nums.length));
     let count = 0;
 
-    while (count <= maxCount) {
+    while (left <= right) {
         if (nums[i] > target) {
             right = i - 1;
             i = Math.floor((left + right) / 2);
