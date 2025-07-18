@@ -6,10 +6,6 @@
 var searchInsert = function(nums, target) {
     let left = 0;
     let right = nums.length - 1;
-    
-
-    let maxCount = Math.floor(Math.log2(nums.length));
-    let count = 0;
 
     while (left <= right) {
         let i = Math.floor((left + right) / 2);
@@ -20,7 +16,6 @@ var searchInsert = function(nums, target) {
         } else {
             return i;
         }
-        count++;
     }
     return left;
 };
