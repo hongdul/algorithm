@@ -21,7 +21,6 @@ var combinationSum = function(candidates, target) {
         }
 
         for(let i = l; i < candidates.length; i++) {
-            if (candidates[i] > target) continue;
             let temp = [...numbers, candidates[i]];
             backtrack(temp, i);
         }
