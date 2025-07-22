@@ -63,6 +63,7 @@ LeetCode 풀이 레포지토리
 | [0039-combination-sum](https://github.com/hongdul/algorithm/tree/master/0039-combination-sum) |
 | [0040-combination-sum-ii](https://github.com/hongdul/algorithm/tree/master/0040-combination-sum-ii) |
 | [0041-first-missing-positive](https://github.com/hongdul/algorithm/tree/master/0041-first-missing-positive) |
+| [0042-trapping-rain-water](https://github.com/hongdul/algorithm/tree/master/0042-trapping-rain-water) |
 ## Two Pointers
 |  |
 | ------- |
@@ -76,6 +77,7 @@ LeetCode 풀이 레포지토리
 | [0027-remove-element](https://github.com/hongdul/algorithm/tree/master/0027-remove-element) |
 | [0028-find-the-index-of-the-first-occurrence-in-a-string](https://github.com/hongdul/algorithm/tree/master/0028-find-the-index-of-the-first-occurrence-in-a-string) |
 | [0031-next-permutation](https://github.com/hongdul/algorithm/tree/master/0031-next-permutation) |
+| [0042-trapping-rain-water](https://github.com/hongdul/algorithm/tree/master/0042-trapping-rain-water) |
 ## Sorting
 |  |
 | ------- |
@@ -121,6 +123,7 @@ LeetCode 풀이 레포지토리
 | [0005-longest-palindromic-substring](https://github.com/hongdul/algorithm/tree/master/0005-longest-palindromic-substring) |
 | [0010-regular-expression-matching](https://github.com/hongdul/algorithm/tree/master/0010-regular-expression-matching) |
 | [0022-generate-parentheses](https://github.com/hongdul/algorithm/tree/master/0022-generate-parentheses) |
+| [0042-trapping-rain-water](https://github.com/hongdul/algorithm/tree/master/0042-trapping-rain-water) |
 ## Greedy
 |  |
 | ------- |
@@ -136,6 +139,7 @@ LeetCode 풀이 레포지토리
 |  |
 | ------- |
 | [0020-valid-parentheses](https://github.com/hongdul/algorithm/tree/master/0020-valid-parentheses) |
+| [0042-trapping-rain-water](https://github.com/hongdul/algorithm/tree/master/0042-trapping-rain-water) |
 ## String Matching
 |  |
 | ------- |
@@ -156,4 +160,8 @@ LeetCode 풀이 레포지토리
 |  |
 | ------- |
 | [0036-valid-sudoku](https://github.com/hongdul/algorithm/tree/master/0036-valid-sudoku) |
+## Monotonic Stack
+|  |
+| ------- |
+| [0042-trapping-rain-water](https://github.com/hongdul/algorithm/tree/master/0042-trapping-rain-water) |
 <!---LeetCode Topics End-->
