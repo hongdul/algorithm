@@ -3,44 +3,43 @@
  * @return {string[][]}
  */
 var solveNQueens = function(n) {
-    let answer = [];
-    let nMap = new Map();
-    for (let i = 0; i < n; i++) {
-        nMap.set(i, '.'.repeat(n));
-    }
-    btr(nMap, 0);
-    return answer;
+    const result = [];
+    const board = Array.from({ length: n }, () => ".".repeat(n));
 
-    function btr(map, row) {
+    const cols = new Set();
+    const diag1 = new Set(); // row - col
+    const diag2 = new Set(); // row + col
+
+    function backtrack(row) {
         if (row === n) {
-            answer.push([...map.values()]);
+            result.push([...board]);
             return;
         }
-        let cur = map.get(row);
-        let posIndex = cur
-            .split("")
-            .map((char, idx) => (char === "." ? idx : -1))
-            .filter(idx => idx !== -1);
-        for (let i = 0; i < posIndex.length; i++) {
-            let temp = new Map(map);
-            cur = cur.split("").map((value, idx) => {
-                if (idx === posIndex[i]) return 'Q';
-                else return '.';
-            }).join("");
-            temp.set(row, cur);
-            block(temp, row, posIndex[i]);
-            btr(temp, row + 1);
-        }
-    }
-    function block(map, row, index) {
-        for (let i = 1; i + row < n; i++) {
-            let nextRow = map.get(row + i).split("");
-            for (let r = 0; r < nextRow.length; r++) {
-                if (r === index - i || r === index + i || r === index) {
-                    nextRow[r] = 'X';
-                }
+
+        for (let col = 0; col < n; col++) {
+            if (cols.has(col) || diag1.has(row - col) || diag2.has(row + col)) {
+                continue;
             }
-            map.set(row + i, nextRow.join(""));
+
+            const rowArr = board[row].split("");
+            rowArr[col] = "Q";
+            board[row] = rowArr.join("");
+
+            cols.add(col);
+            diag1.add(row - col);
+            diag2.add(row + col);
+
+            backtrack(row + 1);
+
+            // backtrack
+            rowArr[col] = ".";
+            board[row] = rowArr.join("");
+            cols.delete(col);
+            diag1.delete(row - col);
+            diag2.delete(row + col);
         }
     }
+
+    backtrack(0);
+    return result;
 };
