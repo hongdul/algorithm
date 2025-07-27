@@ -78,6 +78,7 @@ LeetCode 풀이 레포지토리
 | [0053-maximum-subarray](https://github.com/hongdul/algorithm/tree/master/0053-maximum-subarray) |
 | [0054-spiral-matrix](https://github.com/hongdul/algorithm/tree/master/0054-spiral-matrix) |
 | [0055-jump-game](https://github.com/hongdul/algorithm/tree/master/0055-jump-game) |
+| [0056-merge-intervals](https://github.com/hongdul/algorithm/tree/master/0056-merge-intervals) |
 ## Two Pointers
 |  |
 | ------- |
@@ -100,6 +101,7 @@ LeetCode 풀이 레포지토리
 | [0018-4sum](https://github.com/hongdul/algorithm/tree/master/0018-4sum) |
 | [0047-permutations-ii](https://github.com/hongdul/algorithm/tree/master/0047-permutations-ii) |
 | [0049-group-anagrams](https://github.com/hongdul/algorithm/tree/master/0049-group-anagrams) |
+| [0056-merge-intervals](https://github.com/hongdul/algorithm/tree/master/0056-merge-intervals) |
 ## Linked List
 |  |
 | ------- |
