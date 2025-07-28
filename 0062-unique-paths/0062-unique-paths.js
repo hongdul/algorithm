@@ -13,17 +13,12 @@ var uniquePaths = function(m, n) {
     }
 
     return dp[m - 1][n - 1];
-    
-    // let answer = 1;
-    // grid(m - 1, n - 1);
-    // return answer;
 
-    // function grid(x, y) {
-    //     if (x * y === 0) {
-    //         answer++;
-    //         return;
-    //     }
-    //     grid(x - 1, y);
-    //     grid(x, y - 1);
+// gpt - (m - 1) + (n - 1)의 경우 중에 (m - 1) (아래)로 가는 경우의 수. 수학 공식
+    // let result = 1;
+    // for (let i = 1; i <= m - 1; i++) {
+    //     result *= (n - 1 + i);
+    //     result /= i;
     // }
+    // return Math.round(result);
 };
