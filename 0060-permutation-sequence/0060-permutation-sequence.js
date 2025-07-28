@@ -9,13 +9,10 @@ var getPermutation = function(n, k) {
         fac *= i;
     }
     let indexArr = Array.from({ length: n }, () => 0);
-    console.log(indexArr);
 
     let temp = fac;
     for (let i = n; i >= 1; i--) {
         temp = Math.floor(temp / i);
-
-        console.log(temp, k);
         let quotient = 0;
         if (k >= temp) {
             for (let l = 1; l <= i; l++) {
@@ -29,12 +26,12 @@ var getPermutation = function(n, k) {
         }
         k -= quotient;
     }
-    console.log(indexArr);
     let numbers = Array.from({ length: n }, (_, i) => i + 1);
-    console.log(numbers);
     let answer = "";
+
     for (let i = 0; i < indexArr.length; i++) {
         answer += numbers.splice(indexArr[i], 1);
     }
+
     return answer;
 };
