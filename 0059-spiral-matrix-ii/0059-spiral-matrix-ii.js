@@ -17,8 +17,6 @@ var generateMatrix = function(n) {
     let row = 0, col = 0;
     while (num <= n * n) {
         while (row < n && row >= 0 && col < n && col >= 0) {
-            console.log(row, col, num);
-
             if (answer[row][col] === 0) {
                 answer[row][col] = num;
                 num++;
