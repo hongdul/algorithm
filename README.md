@@ -14,6 +14,7 @@ LeetCode 풀이 레포지토리
 | [0029-divide-two-integers](https://github.com/hongdul/algorithm/tree/master/0029-divide-two-integers) |
 | [0048-rotate-image](https://github.com/hongdul/algorithm/tree/master/0048-rotate-image) |
 | [0050-powx-n](https://github.com/hongdul/algorithm/tree/master/0050-powx-n) |
+| [0060-permutation-sequence](https://github.com/hongdul/algorithm/tree/master/0060-permutation-sequence) |
 ## String
 |  |
 | ------- |
@@ -123,6 +124,7 @@ LeetCode 풀이 레포지토리
 | [0024-swap-nodes-in-pairs](https://github.com/hongdul/algorithm/tree/master/0024-swap-nodes-in-pairs) |
 | [0025-reverse-nodes-in-k-group](https://github.com/hongdul/algorithm/tree/master/0025-reverse-nodes-in-k-group) |
 | [0050-powx-n](https://github.com/hongdul/algorithm/tree/master/0050-powx-n) |
+| [0060-permutation-sequence](https://github.com/hongdul/algorithm/tree/master/0060-permutation-sequence) |
 ## Sliding Window
 |  |
 | ------- |
