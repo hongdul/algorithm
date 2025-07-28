@@ -5,7 +5,6 @@
  */
 var insert = function(intervals, newInterval) {
     if (intervals.length === 0) return [newInterval];
-    intervals.sort((a, b) => a[0] - b[0]);
     let i = 0;
     while (i < intervals.length) {
         if (intervals[i][1] >= newInterval[0]) {
