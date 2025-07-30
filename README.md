@@ -39,6 +39,7 @@ LeetCode 풀이 레포지토리
 | [0049-group-anagrams](https://github.com/hongdul/algorithm/tree/master/0049-group-anagrams) |
 | [0058-length-of-last-word](https://github.com/hongdul/algorithm/tree/master/0058-length-of-last-word) |
 | [0067-add-binary](https://github.com/hongdul/algorithm/tree/master/0067-add-binary) |
+| [0068-text-justification](https://github.com/hongdul/algorithm/tree/master/0068-text-justification) |
 ## Hash Table
 |  |
 | ------- |
@@ -89,6 +90,7 @@ LeetCode 풀이 레포지토리
 | [0059-spiral-matrix-ii](https://github.com/hongdul/algorithm/tree/master/0059-spiral-matrix-ii) |
 | [0063-unique-paths-ii](https://github.com/hongdul/algorithm/tree/master/0063-unique-paths-ii) |
 | [0066-plus-one](https://github.com/hongdul/algorithm/tree/master/0066-plus-one) |
+| [0068-text-justification](https://github.com/hongdul/algorithm/tree/master/0068-text-justification) |
 ## Two Pointers
 |  |
 | ------- |
@@ -221,6 +223,7 @@ LeetCode 풀이 레포지토리
 | [0054-spiral-matrix](https://github.com/hongdul/algorithm/tree/master/0054-spiral-matrix) |
 | [0059-spiral-matrix-ii](https://github.com/hongdul/algorithm/tree/master/0059-spiral-matrix-ii) |
 | [0067-add-binary](https://github.com/hongdul/algorithm/tree/master/0067-add-binary) |
+| [0068-text-justification](https://github.com/hongdul/algorithm/tree/master/0068-text-justification) |
 ## Combinatorics
 |  |
 | ------- |
