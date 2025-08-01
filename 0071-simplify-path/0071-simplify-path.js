@@ -5,7 +5,6 @@
 var simplifyPath = function(path) {
     let answer = "";
     let pathArr = path.split("/").filter((it) => it !== '');
-    console.log(pathArr);
     let i = 0;
     while (i < pathArr.length) {
         switch (pathArr[i]) {
@@ -26,7 +25,6 @@ var simplifyPath = function(path) {
         }
     }
     return pathArr.reduce((acc, cur) => {
-        console.log(cur);
         acc += `/${cur}`;
         return acc;
     }, "") || "/";
