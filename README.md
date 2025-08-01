@@ -42,6 +42,7 @@ LeetCode 풀이 레포지토리
 | [0058-length-of-last-word](https://github.com/hongdul/algorithm/tree/master/0058-length-of-last-word) |
 | [0067-add-binary](https://github.com/hongdul/algorithm/tree/master/0067-add-binary) |
 | [0068-text-justification](https://github.com/hongdul/algorithm/tree/master/0068-text-justification) |
+| [0071-simplify-path](https://github.com/hongdul/algorithm/tree/master/0071-simplify-path) |
 ## Hash Table
 |  |
 | ------- |
@@ -192,6 +193,7 @@ LeetCode 풀이 레포지토리
 | [0020-valid-parentheses](https://github.com/hongdul/algorithm/tree/master/0020-valid-parentheses) |
 | [0032-longest-valid-parentheses](https://github.com/hongdul/algorithm/tree/master/0032-longest-valid-parentheses) |
 | [0042-trapping-rain-water](https://github.com/hongdul/algorithm/tree/master/0042-trapping-rain-water) |
+| [0071-simplify-path](https://github.com/hongdul/algorithm/tree/master/0071-simplify-path) |
 ## String Matching
 |  |
 | ------- |
