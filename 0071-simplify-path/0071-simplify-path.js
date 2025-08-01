@@ -3,7 +3,7 @@
  * @return {string}
  */
 var simplifyPath = function(path) {
-    let answer = "";
+    let answer = "/";
     let pathArr = path.split("/").filter((it) => it !== '');
     let i = 0;
     while (i < pathArr.length) {
@@ -28,4 +28,16 @@ var simplifyPath = function(path) {
         acc += `/${cur}`;
         return acc;
     }, "") || "/";
+
+
+
+// gpt - 스택 기반 풀이
+    // let stack = [];
+    // for (const part of path.split("/")) {
+    // if (part === "" || part === ".") continue;
+    // if (part === "..") stack.pop();
+    // else stack.push(part);
+    // }
+
+    // return "/" + stack.join("/");
 };
