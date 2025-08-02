@@ -10,26 +10,26 @@ var searchMatrix = function(matrix, target) {
     let n = matrix[0].length - 1;
     
     let left = 0;
-    let mid;
+    let mMid;
     while (left <= m) {
-        mid = Math.floor((left + m) / 2);
-        if (matrix[mid][0] > target) {
-            m = mid - 1;
-        } else if (matrix[mid][0] < target) {
-            if (mid === matrix.length - 1) break;
-            if (matrix[mid + 1][0] === target) return true;
-            if (matrix[mid + 1][0] > target) break;
-            left = mid + 1;
+        mMid = Math.floor((left + m) / 2);
+        if (matrix[mMid][0] > target) {
+            m = mMid - 1;
+        } else if (matrix[mMid][0] < target) {
+            if (mMid === matrix.length - 1) break;
+            if (matrix[mMid + 1][0] === target) return true;
+            if (matrix[mMid + 1][0] > target) break;
+            left = mMid + 1;
         } else return true;
     }
     left = 0;
-    m = mid;
+    let nMid;
     while (left <= n) {
-        mid = Math.floor((left + n) / 2);
-        if (matrix[m][mid] > target) {
-            n = mid - 1;
-        } else if (matrix[m][mid] < target) {
-            left = mid + 1;
+        nMid = Math.floor((left + n) / 2);
+        if (matrix[mMid][nMid] > target) {
+            n = nMid - 1;
+        } else if (matrix[mMid][nMid] < target) {
+            left = nMid + 1;
         } else return true;
     }
     return false;
