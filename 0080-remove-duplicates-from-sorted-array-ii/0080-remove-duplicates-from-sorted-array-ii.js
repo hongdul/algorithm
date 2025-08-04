@@ -15,7 +15,6 @@ var removeDuplicates = function(nums) {
         }
         if (nums[i] === nums[i - 1]) {
             dupCount++;
-            console.log(i, nums[i], dupCount);
 
             if (dupCount >= 3) {
                 let tempCount = 1;
@@ -29,7 +28,6 @@ var removeDuplicates = function(nums) {
         } else {
             dupCount = 1;
         }
-
         i++;
     }
     return answer;
