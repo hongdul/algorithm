@@ -5,30 +5,22 @@
 var removeDuplicates = function(nums) {
     if (nums.length === 1) return 1;
 
-    let answer = nums.length;
+    let i = 1;
+    let p = 1;
     let dupCount = 1;
-    let i = 0;
-    while (i < answer) {
-        if (i === 0) {
-            i++;
-            continue;
-        }
-        if (nums[i] === nums[i - 1]) {
+    while (p < nums.length) {
+        if (nums[p] === nums[p - 1]) {
             dupCount++;
-
-            if (dupCount >= 3) {
-                let tempCount = 1;
-                while (nums[i + tempCount] === nums[i]) {
-                    tempCount++;
-                }
-                nums.splice(i, tempCount);
-                answer -= tempCount;
-                dupCount = 1;
+            if (dupCount <= 2) {
+                nums[i] = nums[p];
+                i++;
             }
         } else {
             dupCount = 1;
+            nums[i] = nums[p];
+            i++;
         }
-        i++;
+        p++;
     }
-    return answer;
+    return i;
 };
