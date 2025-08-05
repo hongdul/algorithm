@@ -10,27 +10,23 @@
  * @return {ListNode}
  */
 var deleteDuplicates = function(head) {
-    let prev = new ListNode(0, head);
-    let answer = new ListNode(0, prev);
+    let dummy = new ListNode(0, head);
+    let prev = dummy;
     let cur = head;
-    let dupFlag = false;
 
     while (cur) {
-        if (cur.next) {
-            if (cur.val === cur.next.val) {
-                dupFlag = true;
-            } else {
-                if (dupFlag) {
-                    prev.next = cur.next;
-                    dupFlag = false;
-                } else {
-                    prev = cur;
-                }
-            }
-        } else if (dupFlag) {
+        let dupFlag = false;
+        while (cur.next && cur.val === cur.next.val) {
+            cur = cur.next;
+            dupFlag = true;
+        }
+            
+        if (dupFlag) {
             prev.next = cur.next;
+        } else {
+            prev = prev.next;
         }
         cur = cur.next;
     }
-    return answer.next.next;
+    return dummy.next;
 };
